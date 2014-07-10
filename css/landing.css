@@ -1,0 +1,120 @@
+@font-face {
+	font-family: 'GirlFont';
+	src: url( 'fonts/glidergirls.ttf' );
+}
+@font-face {
+	font-family: 'BoyFont';
+	src: url( 'fonts/big_rage.ttf' );
+}
+body {
+	background: #2F4F4F;
+}
+#wrap {
+	width: 800px;
+	margin: auto;
+	padding: 10px;
+	border-radius: 10px;
+	background: black;
+}
+#play {
+	height: 159px;
+	width: 400px;
+	float: right;
+}
+#container {
+	background: url( '../img/dark-metal-texture.png' );
+	border-radius: 10px;
+	width: 760px;
+	height: 503px;
+	padding: 20px 20px 0px 20px;
+}
+#girls {
+	width: 285px;
+	float: left;
+}
+#boys {
+	width: 285px;
+	float: right;
+}
+h1.play {
+	color: white;
+	font-size: 30px;
+	margin: 0px 0px 0px 131px;
+	text-shadow: 2px 2px 2px black;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+img.logo {
+	float: left;
+	padding: 0px 0px 0px 10px;
+}
+img.play {
+	padding: 05px 16px 25px 66px;
+}
+div.scoreBox {
+	position: relative;
+	bottom: 100px;
+}
+div.break {
+	float: left;
+	position: relative;
+	right: 20px;
+	background: url( '../img/break.png' );
+	height: 18px;
+	width: 800px;
+}
+div.break-top {
+	margin-top: 20px;
+}
+div.score {
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	text-align: center;
+	background: lightGrey;
+	width: 180px;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 0px 42.5px 0px 42.5px
+}
+div.scoreLabel {
+	height: 222px;
+	width: 285px;
+}
+div.links {
+	float: left;
+	position: relative;
+	right: 20px;
+	height: 24px;
+	width: 780px;
+	background: #2E2E2E;
+	padding: 5px 10px 5px 10px;
+}
+span.links {
+	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 20px;
+	color: #C9C9C9;
+}
+span.girls {
+	display: block;
+	padding-top: 80px;
+	text-align: center;
+	text-shadow: 2px 2px 2px black;
+	font-family: 'GirlFont';
+	font-size: 60px;
+	color: red;
+}
+span.boys {
+	display: block;
+	padding-top: 100px;
+	text-align: center;
+	text-shadow: 2px 2px 2px black;
+	font-family: 'BoyFont';
+	color: blue;
+	font-size: 120px;
+}
+span.scoreLabel {
+	font-size: 20px;
+	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+	font-weight: bold;
+}
+span.score {
+	font-size: 35px;
+}
