@@ -21,13 +21,17 @@ import webapp2
 #Import Main Handler
 from MainHandler import MainHandler   #Handles All Requests to Origin (Landing)
 
+#Import Administrator Handler
+from AdminHandler import AdminHandler
+
 #Import User Handlers
 from LoginHandler import LoginHandler #Handles Login Requests
-from RegHandler import RegHandler     #Handles User Registration
+from CreateHandler import CreateHandler     #Handles User Registration
 
     
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/login', LoginHandler),
-    ('/signup', RegHandler)
+    ('/create', CreateHandler),
+    ('/dashboard', AdminHandler)
 ], debug=True)

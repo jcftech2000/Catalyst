@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Catalyst - Admin Dashboard</title>
+	</head>
+	<body>
+		<h1>Admin Dashboard</h1>
+		<span>There are {{genesis}} total Genesis accounts</span>
+		<br />
+		<span>There are {{girlGenesis}} female Genesis accounts</span>
+		<br />
+		<span>There are {{boyGenesis}} male Genesis accounts</span>
+		<br />
+		<form action="" method="POST">
+			<input type="hidden" name="deleteAll" value="wallace" />
+			<input type="submit" value="Delete ALL Genesis Accounts" />
+		</form>
+		<br />
+		<form action="" method="POST">
+			<input type="hidden" name="genesis" value="wallace" />
+			<input type="submit" value="Delete BOY Genesis" />
+		</form>
+		<br />
+		<form action="" method="POST">
+			<input type="hidden" name="genesis" value="wallace" />
+			<input type="submit" value="Delete GIRL Genesis" />
+		</form>
+		<br />
+		<form action="" method="POST">
+			<input type="hidden" name="genesis" value="wallace" />
+			<input type="submit" value="Begin Genesis" />
+		</form>
+	</body>
+</html>
