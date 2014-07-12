@@ -21,6 +21,7 @@ class AdminHandler(Handler):
             genesisContent = genesisOpener.read()
             genesisUsers = loads(genesisContent)
             genesisID = 0
+            genesisDB = []
             genesisAccount = {}
             genesisAccount['genesis'] = True
             for uname in genesisUsers:
@@ -35,8 +36,8 @@ class AdminHandler(Handler):
                 else:
                     #Randomly Decide Gender of 1000 Genesis Accounts
                     genesisAccount['gender'] = (round(random())==1)
-                genesisDB = Users(**genesisAccount)
-                genesisDB.put()
+                genesisDB.append(Users(**genesisAccount))
+            db.put(genesisDB)
         elif(deleteAll==GENESIS):
             for i in db.GqlQuery('SELECT * FROM Users WHERE genesis=:1', True):
                 i.delete()
