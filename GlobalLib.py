@@ -7,8 +7,8 @@ from json import loads
 from random import random
 
 #Store Secret Variables (Later Use "Key" Database)
-SECRET = 'wallace'
-GENESIS = 'wallace'
+SECRET = 'wallace'  #Password Hashing
+GENESIS = 'wallace' #Used for Genesis Accounts
 
 genesisAccounts = ["m.rosario88",
 "grneyz76",

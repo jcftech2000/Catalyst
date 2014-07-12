@@ -17,9 +17,9 @@ class AdminHandler(Handler):
         genesis = self.request.get('genesis')
         deleteAll = self.request.get('deleteAll')
         if(genesis==GENESIS):
-            #genesisOpener = urlopen('http://jaredflores.com/catalyst/GENESIS.json')
-            #genesisContent = genesisOpener.read()
-            genesisUsers = genesisAccounts #loads(genesisContent)
+            genesisOpener = urlopen('http://jaredflores.com/catalyst/GENESIS.json')
+            genesisContent = genesisOpener.read()
+            genesisUsers = loads(genesisContent)
             genesisID = 0
             genesisAccount = {}
             genesisAccount['genesis'] = True
