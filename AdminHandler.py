@@ -39,5 +39,7 @@ class AdminHandler(Handler):
                 genesisDB.append(Users(**genesisAccount))
             db.put(genesisDB)
         elif(deleteAll==GENESIS):
-            for i in db.GqlQuery('SELECT * FROM Users WHERE genesis=:1', True):
-                i.delete()
+            deleteAccs = []
+            for user in db.GqlQuery('SELECT * FROM Users WHERE genesis=:1', True):
+                deleteAccs.append(user)
+            db.delete(deleteAccs)

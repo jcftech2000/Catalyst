@@ -10,6 +10,8 @@ class LoginHandler(Handler):
         pword = self.request.get('pass')
         userQuery = db.GqlQuery('SELECT * FROM Users WHERE user=:1', uname).get()
         if(userQuery != None and hashPw(pword)==userQuery.pword):
+            uid = str(userQuery.key().id())
+            self.addCookie(genCookie(uid, userQuery.pword))
             pass
         else:
             self.render('login.html')

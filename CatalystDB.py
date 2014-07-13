@@ -15,6 +15,12 @@ class Users(db.Model):
     points = db.IntegerProperty(default=0)           #User Earned Points
     joined = db.DateTimeProperty(auto_now_add=True)  #Creation Date
 
+#Points Database
+class Weeks(db.Model):
+    week = db.IntegerProperty(required=True)
+    girlPoints = db.IntegerProperty(required=True)
+    boyPoints = db.IntegerProperty(required=True)
+
 #Classified Database
 ##class Key(db.Model):
 ##    genesis = db.StringProperty(default="wallace")

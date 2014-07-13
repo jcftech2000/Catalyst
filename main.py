@@ -24,6 +24,9 @@ from MainHandler import MainHandler   #Handles All Requests to Origin (Landing)
 #Import Administrator Handler
 from AdminHandler import AdminHandler
 
+#Import Game Handler
+from GameHandler import GameHandler
+
 #Import User Handlers
 from LoginHandler import LoginHandler #Handles Login Requests
 from CreateHandler import CreateHandler     #Handles User Registration
@@ -33,5 +36,6 @@ app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/login', LoginHandler),
     ('/create', CreateHandler),
+    ('/games((?:/[a-zA-Z0-9]*)?)', GameHandler),
     ('/dashboard', AdminHandler)
 ], debug=True)
